@@ -3,11 +3,11 @@ import os
 from discord.ext import commands
 from dotenv import load_dotenv
 
-client = commands.Bot(command_prefix = '>', case_insensitive=True)
-client.remove_command('help')
-
 load_dotenv()
 TOKEN = os.getenv("DISCORDTOKEN")
+
+client = commands.Bot(command_prefix = '>', case_insensitive=True)
+client.remove_command('help')
 
 #@client.command()
 #async def load(ctx, extension):
